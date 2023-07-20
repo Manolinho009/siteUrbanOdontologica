@@ -295,20 +295,11 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <h2>Our <span class="fw-bold">Works</span></h2>
-                        <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+                        <h2>Fotos da <span class="fw-bold">Clinica</span></h2>
                     </div>
                 </div>
             </div>
             <div class="row mt-5 ">
-                <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
-                    <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
-                    <li class="list-inline-item"><a class="" data-filter=".seo">Seo</a></li>
-                    <li class="list-inline-item"><a class="" data-filter=".webdesign">Webdesign</a></li>
-                    <li class="list-inline-item"><a class="" data-filter=".WORK">WORK</a></li>
-                    <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li>
-                </ul>
-            </div>
         </div>
         <div class="container">
             <div class="row mt-4 work-filter">
@@ -411,8 +402,8 @@
                     </div>
                 </div> 
             </div>                 
-            <div class="row mt-5">
-                <div class="col-lg-4 mt-3">
+            <div class="row mt-5  justify-content-center">
+                <div class="col-lg-4 mt-3 "> 
                     <div class="rounded bg-white p-2">
                         <div class="img_blog">
                             <img src="images/blog/blog-1.jpg" alt="" class="img-fluid rounded mx-auto d-block">
@@ -458,7 +449,9 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2><span class="fw-bold">Entre em Contato</span> Conosco</h2>
-                       
+                        
+                        
+                        
                     </div>
                 </div>
             </div> 
@@ -497,6 +490,32 @@
                     </div>
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="form-kerri contact_form">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group mt-2">
+                                        <input type="text" id="nome_imp" class="form-control" placeholder="Seu nome..." aria-label="Seu Nome">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mt-2">
+                                        <input type="text" class="form-control" id="assunto_imp" placeholder="Assunto*">
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-end mt-2">
+                                    <button type="button" onclick="enviar_msg()" class="btn btn-secondary">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
     </section>
     <!-- END CONTACT -->
 
@@ -569,6 +588,24 @@
                 speed: .25
             });
         }
+    </script>
+
+    <script>
+        var baseMsg = 'https://wa.me//5541995506691?text='
+
+        function enviar_msg(){
+            assunto = $('#assunto_imp').val()
+            nome = $('#nome_imp').val()
+
+            msg = 'Olá meu nome é: '+nome+', estou entrando em contato pelo site, preciso de ajuda quanto a : '+assunto
+            
+            final = baseMsg+msg
+
+            window.open(final); // Replace this with the desired URL
+
+        }
+
+
     </script>
 </body>
 </html>
