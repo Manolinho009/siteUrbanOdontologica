@@ -260,7 +260,7 @@ button:focus {
 
 .custom-nav .navbar-brand .logo-light,
 .custom-nav .navbar-brand .logo-dark {
-    height: 27px;
+    height: 45px;
 }
 
 .logo .logo-light {
@@ -272,6 +272,9 @@ button:focus {
 }
 
 .stickyadd .logo .logo-light {
+    display: none;
+}
+.sticky .logo .logo-light {
     display: none;
 }
 
@@ -294,6 +297,7 @@ button:focus {
     background-color: #fff !important;
     box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.050980392156862744);
     padding: 15px 0px;
+    margin-top: 0 !important;
 }
 
 .custom-nav.stickyadd .navbar-nav li a {
