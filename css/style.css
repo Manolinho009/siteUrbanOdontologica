@@ -420,6 +420,9 @@ button:focus {
 
 .services-boxes {
     border: 1px solid #e8e8e8;
+    background-color: white;
+    min-height: 225px;
+    max-height: 100%;
 }
 
 .services-boxes .services-boxes-icon i {
