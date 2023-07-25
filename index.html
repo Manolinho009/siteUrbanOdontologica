@@ -36,11 +36,68 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/color/default.css" id="option-color">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-Lzlmxud9eC6CU4y0w4lm0xjZEP6OWQ69dS7C2ZbEDJ7PJ7smw5Vp38m14F75KhSt" crossorigin="anonymous"></script>
 
     <style>
-        .accordion-item{
-            background-color: none !important;
-            border: none;
+
+        .icon {
+            display: none;
+        }
+        .mdi-whatsapp::before{
+            display: flex;
+            margin-top: -14px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .icon {
+                display: inline-block;
+
+           
+          
+              
+            }
+        }
+       
+      
+        
+
+        @media (max-width: 768px) {
+            #infoNav {
+                display: none;
+            }
+        }
+       
+        /* .sticky{
+            margin-top: 100px;
+        } */
+      
+        @media (min-width: 769px) {
+            .sticky .collapse{
+                display: flex !important;
+                justify-content: center !important;
+            }
+    
+            .stickyadd .collapse {
+                margin-top: 0;
+            }
+    
+            .stickyadd .infoNav{
+                visibility: hidden;
+                display: none;
+                height: 0;
+            }
+    
+            .stickyadd .ms-auto{
+                margin-left: auto!important;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            #infoNav {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -54,15 +111,42 @@
     </div>
 
 	<!-- Start Navbar -->
-	<nav class="navbar navbar-expand-lg custom-nav navbar-light fixed-top sticky">
-	    <div class="container">
+	<nav style="padding-top: 0;display: flex; flex-direction: column;" class="navbar navbar-expand-lg custom-nav navbar-light fixed-top sticky">
+        <div class="container-fluid infoNav" id="infoNav" style="background-color: white; display: flex;flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-evenly; align-items: center;">
+            <img src="images/Logo Urban Dark.png" id="infoNav" alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
+
+            <div id="infoNav">
+                <span class="mx-2" style="font-size: 23px;">
+                Agende sua consulta : (41) 3149-1342 ou (41) 9550-6691  
+                </span>
+                <a href="https://wa.me//5541995506691?text=" target="_blank">
+                <i style="font-size: 50px;" class="mdi mdi-whatsapp mt-3"></i>
+
+               
+                </a>
+            </div>
+            
+
+        </div>
+
+        <div class="container  mt-4">
 	        <a class="navbar-brand pt-0 logo" href="#">
-                <img src="images/Logo Urban.png" alt="" class="img-fluid logo-light" style="font-size: 40px;">
+                <img src="images/logo.png" alt="" class="img-fluid logo-light" style="font-size: 40px;">
                 <img src="images/Logo Urban Dark.png" alt="" class="img-fluid logo-dark">
+
+                <a href="https://wa.me//5541995506691?text=" target="_blank" class="mobile-whatsapp-icon">
+                    <i style="font-size: 30px;  margin-top: -21px;
+                    display: flex;
+                    " class="mdi mdi-whatsapp mt-3 icon" ></i>
             </a>
+            
+          
+
 	        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
 	            <span class="mdi mdi-menu"></span>
 	        </button>
+           
 	        <div class="collapse navbar-collapse" id="navbarNav">
 	            <ul class="navbar-nav ms-auto" id="main_nav">
 	                <li class="nav-item">
@@ -89,9 +173,8 @@
 	</nav>
 	<!-- End Navbar -->
 
-
     <!-- START HOME -->
-    <section class="section header-bg-img h-100vh align-items-center d-flex" id="home">
+    <section class="section header-bg-img h-100vh align-items-center d-flex" id="backgroundChange">
         <div class="bg-overlay"></div>
         <div class="container z-index">
             <div class="row justify-content-center">
@@ -129,15 +212,15 @@
                                 <img src="images/about.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
                             </div>
                             <div class="col p-1">
-                                <img src="images/about.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
+                                <img src="images/works/2.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col p-1">
-                                <img src="images/about.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
+                                <img src="images/works/3.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
                             </div>
                             <div class="col p-1">
-                                <img src="images/about.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
+                                <img src="images/works/4.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail">
                             </div>
                         </div>
                     </div>
@@ -888,7 +971,18 @@
             window.open(final); // Replace this with the desired URL
 
         }
-
+      
+            var images = ['images/works/1.jpg', 'images/works/2.jpg', 'images/works/5.jpg']; // Caminho das imagens
+            var i = 0;
+            
+            function changeBackground() {
+                document.getElementById('backgroundChange').style.backgroundImage = "url(" + images[i] + ")";
+                i = i < images.length - 1 ? i + 1 : 0;
+            }
+            
+            setInterval(changeBackground, 4000); // Troca a imagem a cada 4 segundos
+      
+        
 
     </script>
 </body>
