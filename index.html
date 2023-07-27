@@ -41,7 +41,7 @@
 
     <style>
         @media (max-width: 768px) {
-            #infoNav {
+            #infoNav, #navSuperior {
                 display: none;
             }
         }
@@ -53,7 +53,7 @@
         @media (min-width: 769px) {
             .sticky .collapse{
                 display: flex !important;
-                justify-content: center !important;
+                /* justify-content: center !important; */
             }
     
             .stickyadd .collapse {
@@ -72,7 +72,7 @@
         }
     
         @media (max-width: 768px) {
-            #infoNav {
+            #infoNav, #navSuperior {
                 display: none;
             }
         }
@@ -99,6 +99,10 @@
         }
         .numberBox small{
             font-size: 17px;
+        }
+
+        .imageCenter{
+            width: 100%;
         }
     </style>
 </head>
@@ -159,14 +163,14 @@
 	    </div>
 	</nav> -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky">
+    <nav id="navSuperior" class="navbar navbar-expand-lg bg-body-tertiary sticky" style="flex-direction: column !important;align-items: flex-end  !important;">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
 
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
             <img src="images/Logo Urban Dark.png" id="infoNav" alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
 
             <div id="infoNav">
@@ -177,7 +181,11 @@
                     <i style="font-size: 50px; color: rgb(51, 211, 65);" class="mdi mdi-whatsapp mt-3"></i>
                 </a>
             </div>
-          </div>
+            
+        </div>
+    </div>
+        <div style="margin-right: 20rem !important;">
+            Av. XJoão Gualberto, 1342 - Sala 609 - Alto da Glória - Curitiba - PR  
         </div>
       </nav>
 
@@ -225,9 +233,14 @@
                 <div class="col-lg-12">
                     <div class="text-center header-content mx-auto">
                         <h4 class="text-white first-title mb-4">Bem Vindo</h4>
+
+                        <img class="imageCenter" src="images/Logo Urban.png" alt="">
+<!--                         
                         <h1 class="header-name text-white text-capitalize mb-0" >Somos <span class="simple-text-rotate fw-bold" style=" background: -webkit-linear-gradient(left, rgb(126, 114, 4) , rgb(173, 164, 35));
                             -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;">Urban Odontologia</span></h1>
+                            -webkit-text-fill-color: transparent;">
+                            
+                        </span></h1> -->
                         <p class="text-white mx-auto header-desc mt-4" style=" background: -webkit-linear-gradient(left, rgb(139, 123, 0) , rgb(241, 223, 87));
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;">Odontologia Premium</p>
