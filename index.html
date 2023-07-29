@@ -71,8 +71,8 @@
             }
         }
     
-        @media (max-width: 768px) {
-            #infoNav, #navSuperior {
+        @media (max-width: 1000px) {
+            #infoNav, #navSuperior, .mine-nav, #navInferior {
                 display: none;
             }
         }
@@ -104,7 +104,40 @@
         .imageCenter{
             width: 100%;
         }
-    </style>
+        .mine-nav{
+            margin-top: 0  !important;
+            padding-top: 0 !important;
+            height: 3.6rem !important;
+            background-color: white;
+            flex-direction: row !important;
+        }
+
+        .mine-nav img{
+            height: 100% !important;
+            width: 160px !important;
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
+        }
+        .mine-nav #navbarNav{
+            justify-content: start !important;
+            margin-left: 5rem !important;
+        }
+
+        .mine-nav #navSuperior{
+            height: 3.6rem !important;
+            width: 12rem !important;
+            visibility: visible !important;
+            display: contents  !important;
+            margin: 0 !important;
+
+        }
+        .mine-nav #infoNav , .mine-nav #navbarNav div, .mine-nav .infoNav{
+            visibility: hidden;
+            display: none;
+            height: 0;
+            
+        }
+        </style>
 </head>
 <body>
 
@@ -163,7 +196,7 @@
 	    </div>
 	</nav> -->
 
-    <nav id="navSuperior" class="navbar navbar-expand-lg bg-body-tertiary sticky" style="flex-direction: column !important;align-items: flex-end  !important;">
+    <nav id="navSuperior" class="navbar navbar-expand-lg bg-body-tertiary sticky" style="flex-direction: column ;align-items: flex-end  !important;">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -171,9 +204,9 @@
 
 
           <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-            <img src="images/Logo Urban Dark.png" id="infoNav" alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
+            <img src="images/Logo Urban Dark.png"  alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
 
-            <div id="infoNav">
+            <div id="infoNav" class="infoNav">
                 <span class="mx-2" style="font-size: 23px; color: rgb(60 84 165);">
                 Agende sua consulta : <span class="numberBox"><small>41.</small>3149-1342</span> ou  <span class="numberBox"><small>41.</small>9550-6691</span> 
                 </span>
@@ -184,13 +217,13 @@
             
         </div>
     </div>
-        <div style="margin-right: 20rem !important;">
+        <div class="infoNav" style="margin-right: 20rem !important;">
             Av. XJoão Gualberto, 1342 - Sala 609 - Alto da Glória - Curitiba - PR  
         </div>
       </nav>
 
       <!-- rgb(12 14 60);    rgb(53 74 146) -->
-    <nav style="background: linear-gradient(90deg, rgb(12 14 60), rgb(53 74 146));" class="navbar navbar-expand-lg bg-body-tertiary sticky">
+    <nav id="navInferior"  style="background: linear-gradient(90deg, rgb(12 14 60), rgb(53 74 146));" class=" navbar navbar-expand-lg bg-body-tertiary sticky">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -425,7 +458,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
