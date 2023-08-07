@@ -40,20 +40,45 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-Lzlmxud9eC6CU4y0w4lm0xjZEP6OWQ69dS7C2ZbEDJ7PJ7smw5Vp38m14F75KhSt" crossorigin="anonymous"></script>
 
     <style>
-        @media (max-width: 768px) {
+
+@media (max-width: 576px) {
+    #infoNav span {
+        display: none !important;
+    }
+    #infoNav .mdi-whatsapp {
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .img-fluid.logo-light {
+        width: 250px !important;
+    }
+    .mdi-whatsapp {
+        font-size: 30px !important;
+    }
+    .infoNav span {
+        font-size: 18px !important;
+    }
+}
+
+
+     /*   @media (max-width: 768px) {
             #infoNav, #navSuperior {
                 display: none;
             }
         }
        
-        /* .sticky{
-            margin-top: 100px;
-        } */
+     
       
         @media (min-width: 769px) {
             .sticky .collapse{
                 display: flex !important;
-                /* justify-content: center !important; */
+               
             }
     
             .stickyadd .collapse {
@@ -75,10 +100,32 @@
             #infoNav, #navSuperior, .mine-nav, #navInferior {
                 display: none;
             }
-        }
+        }*/
         .nav-link{
             color: white;
             margin-inline: 15px;
+            padding: 0.5rem 1rem;
+        }
+        @media (max-width: 768px) {
+            #infoNav {
+                text-align: center; /* Centralizando o texto para melhor visualização */
+                margin: 10px 0; /* Adicionando uma pequena margem para separar os elementos */
+            }
+        
+            .navbar-toggler {
+                display: block;  /* Garantir que o botão do menu hambúrguer seja exibido */
+            }
+        
+            #navbarNav {
+                display: none; /* Inicialmente ocultar o menu até que o usuário clique no menu hambúrguer */
+            }
+        
+            #navbarNav.active {
+                display: flex; /* Exibir o menu quando estiver ativo (por exemplo, quando o menu hambúrguer for clicado) */
+                flex-direction: column; /* Alinhar os itens do menu verticalmente */
+            }
+        
+            /* Pode-se adicionar mais estilos para ajustar outros elementos conforme necessário */
         }
 
         .numberBox{
@@ -144,66 +191,22 @@
     <!-- Loader -->
     <div id="preloader">
         <div id="status">
-            <div class="spinner">Loading...</div>
+            <div class="spinner   Cl%C3%ADnica%20URBAN%20-%20Invisalign%20I%20Facetas%20de%20Porcelana%20I%20Pr%C3%B3teses%20e%20Implantes%20I%20Ortodontia%20I%20Odontologia%20I%20Juvev%C3%AA%20I%20Curitiba-PR ">Loading...</div>
         </div>
     </div>
 
-	<!-- Start Navbar -->
-	<!-- <nav style="padding-top: 0;display: flex; flex-direction: column;" class="navbar navbar-expand-lg custom-nav navbar-light fixed-top sticky">
-        <div class="container-fluid infoNav" id="infoNav" style="background-color: white; display: flex;flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: space-evenly; align-items: center;">
-            <img src="images/Logo Urban Dark.png" id="infoNav" alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
 
-            <div id="infoNav">
-                <span class="mx-2" style="font-size: 23px;">
-                Agende sua consulta : (41) 3149-1342 ou (41) 9550-6691  
-                </span>
-                <a href="https://wa.me//5541995506691?text=" target="_blank">
-                <i style="font-size: 50px;" class="mdi mdi-whatsapp mt-3"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="container  mt-4">
-	        <a class="navbar-brand pt-0 logo" href="#">
-            
-                <img src="images/Logo Urban Dark.png" alt="" class="img-fluid logo-dark">
-            </a>
-	        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	            <span class="mdi mdi-menu"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarNav">
-	            <ul class="navbar-nav ms-auto" id="main_nav">
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#backgroundChange">Inicio</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#about">A Clinica</a>
-	                </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Tratamentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#client">Avaliações</a>
-                    </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#blog">Nossa Equipe</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="#contact">Contato</a>
-	                </li>
-	            </ul>
-	        </div>
-	    </div>
-	</nav> -->
 
     <nav id="navSuperior" class="navbar navbar-expand-lg bg-body-tertiary sticky" style="flex-direction: column ;align-items: flex-end  !important;">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSuperiorNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            
+<span class="navbar-toggler-icon"></span>
+
           </button>
 
 
-          <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+          <div class="collapse navbar-collapse justify-content-around" id="navbarSuperiorNav">
             <img src="images/Logo Urban Dark.png"  alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
 
             <div id="infoNav" class="infoNav">
@@ -218,19 +221,21 @@
         </div>
     </div>
         <div class="infoNav" style="margin-right: 20rem !important;">
-            Av. XJoão Gualberto, 1342 - Sala 609 - Alto da Glória - Curitiba - PR  
+            Av. João Gualberto, 1342 - Sala 609 - Alto da Glória - Curitiba - PR  
         </div>
       </nav>
 
       <!-- rgb(12 14 60);    rgb(53 74 146) -->
     <nav id="navInferior"  style="background: linear-gradient(90deg, rgb(12 14 60), rgb(53 74 146));" class=" navbar navbar-expand-lg bg-body-tertiary sticky">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarInferiorNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            
+<span class="navbar-toggler-icon"></span>
+
           </button>
 
 
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <div class="collapse navbar-collapse justify-content-center" id="navbarInferiorNav">
             
             
             <ul class="navbar-nav">
@@ -265,7 +270,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="text-center header-content mx-auto">
-                        <h4 class="text-white first-title mb-4">Bem Vindo</h4>
+                       
 
                         <img class="imageCenter" src="images/Logo Urban.png" alt="">
 <!--                         
@@ -274,9 +279,7 @@
                             -webkit-text-fill-color: transparent;">
                             
                         </span></h1> -->
-                        <p class="text-white mx-auto header-desc mt-4" style=" background: -webkit-linear-gradient(left, rgb(139, 123, 0) , rgb(241, 223, 87));
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;">Odontologia Premium</p>
+                      
                        
                     </div>
                 </div>
@@ -358,7 +361,7 @@
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
-                            <img src="images/ortodontia.png" style="width: 70px;">
+                            <img src="images/braces.png" style="width: 70px;">
                         </div>
                         <div class="mt-4">
                             
@@ -374,9 +377,10 @@
                         
                                   <div id="panelsStayOpen-ortodontia" class="accordion-collapse collapse">
                                     <div class="accordion-body">
-                                        <p class="text-muted mt-3"><p>O que é?</p> 
+                                        <p class="text-muted mt-3"><p style="font-weight: bold;">O que é?</p> 
                                             A ortodontia é uma especialidade odontológica que se concentra no diagnóstico, prevenção e tratamento de problemas relacionados à posição dos dentes e ao alinhamento da mandíbula.
-                                             <p>Para que serve?</p> 
+                                            <p></p>
+                                             <p style="font-weight: bold;">Para que serve?</p> 
                                             O objetivo principal da ortodontia é corrigir os dentes e a mordida para alcançar um sorriso saudável, funcional e esteticamente agradável. 
                                             </p>
                                     </div>
@@ -390,7 +394,7 @@
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
-                            <img src="images/images.png" style="width: 70px;">
+                            <img src="images/periodontal-desease.png" style="width: 70px;">
                         </div>
                         <div class="mt-4">
                             <!-- <h5 class="mb-0">Periodontia</h5> -->
@@ -407,9 +411,10 @@
                                   <div id="panelsStayOpen-periodontia" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         
-                                    <p class="text-muted mt-3"><p>O que é?</p>
+                                    <p class="text-muted mt-3"><p style="font-weight: bold;">O que é?</p>
                                         A periodontia é uma especialidade da odontologia que se dedica ao estudo, diagnóstico e tratamento das doenças periodontais, que afetam as estruturas que suportam os dentes, como a gengiva, osso alveolar e o ligamento periodontal. A periodontia também atua na área da estética dental, através de cirurgias de correção do nível gengival, principalmente dos dentes anteriores. Atua nas áreas dentais sensíveis e expostas ao meio bucal, o enxerto gengival é um tratamento muito eficaz para certos casos de sensibilidade dentária.
-                                        <p>Para que Serve?</p>
+                                        <p></p>
+                                        <p style="font-weight: bold;">Para que Serve?</p>
                                         Tratar e prevenir as doenças periodontais, mantendo a saúde das estruturas que sustentam os dentes. O tratamento periodontal envolve a remoção da placa bacteriana e tártaro das superfícies dos dentes e das bolsas periodontais (espaços entre os dentes e a gengiva), a realização de raspagem e alisamento radicular para suavizar as superfícies dentárias e eliminar as bactérias causadoras da doença.
                                         </p>
                                     </div>
@@ -424,7 +429,7 @@
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
-                            <img src="images/images.png" style="width: 70px;">
+                            <img src="images/implant.png" style="width: 70px;">
                         </div>
                         <div class="mt-4">
                             <!-- <h5 class="mb-0">Implantodontia</h5> -->
@@ -442,9 +447,9 @@
                                   <div id="panelsStayOpen-implantodontia" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         
-                                        <p class="text-muted mt-3"><p>O que é?</p>
-                                            Um implante dentário é uma estrutura de titânio que é colocada cirurgicamente abaixo da gengiva, na mandíbula ou maxila, para substituir a raiz de um ou vários dentes perdidos. 
-                                            <p>Para o que serve?</p> 
+                                        <p class="text-muted mt-3"><p style="font-weight: bold;">O que é?</p>
+                                            Um implante dentário é uma estrutura de titânio que é colocada cirurgicamente abaixo da gengiva, na mandíbula ou maxila, para substituir a raiz de um ou vários dentes perdidos. <p></p>
+                                            <p style="font-weight: bold;">Para o que serve?</p> 
                                             Serve como suporte para as próteses sobre implantes, que serão colocados posteriormente. As próteses sobre implantes podem ser unitárias ou múltiplas. No caso das próteses múltiplas podemos repor todos os dentes perdidos na arcada através da prótese tipo protocolo. O material utilizado pode ser a porcelana odontológica ou as resinas.
                                             </p>
 
@@ -462,7 +467,7 @@
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
-                            <img src="images/images.png" style="width: 70px;">
+                            <img src="images/root-canal.png" style="width: 70px;">
                         </div>
                         <div class="mt-4">
                             <!-- <h5 class="mb-0">Endodontia</h5> -->
@@ -480,9 +485,10 @@
                                   <div id="panelsStayOpen-endodontia" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         
-                                        <p class="text-muted mt-3"><p>O que é?</p> 
+                                        <p class="text-muted mt-3"><p style="font-weight: bold;">O que é?</p> 
                                             A endodontia é uma especialidade odontológica que trata o interior do dente, especificamente a polpa dentária e o sistema de canais radiculares. A polpa dentária é uma parte vital do dente, composta por nervos e vasos sanguíneos. A endodontia se concentra em diagnosticar e tratar problemas nessa região. 
-                                            <p>Para que Serve?</p> 
+                                            <p></p>
+                                            <p style="font-weight: bold;">Para que Serve?</p> 
                                             O objetivo principal da endodontia é salvar o dente que está comprometido. Ao remover a polpa afetada e tratar a infecção, é possível aliviar a dor, eliminar a infecção e restaurar a saúde do dente. Após o tratamento endodôntico, é comum que seja necessário realizar uma restauração, como uma coroa ou um bloco (onlay), para fortalecer e proteger o dente tratado. Permite que o paciente mantenha seus dentes naturais, evitando a extração. Preservar os dentes naturais é importante para a mastigação adequada, a estabilidade dos dentes vizinhos e a estética do sorriso. 
                                             </p>
                                     </div>
@@ -499,7 +505,7 @@
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
-                            <img src="images/images.png" style="width: 70px;">
+                            <img src="images/tooth.png" style="width: 70px;">
                         </div>
                         <div class="mt-4">
                             <!-- <h5 class="mb-0">Próteses Dentárias</h5> -->
@@ -516,9 +522,10 @@
                                   <div id="panelsStayOpen-proteses" class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         
-                                        <p class="text-muted mt-3"><p>O que são?</p> 
+                                        <p class="text-muted mt-3"><p style="font-weight: bold;">O que são?</p> 
                                             Próteses dentárias são aparelhos personalizados feitos para substituir dentes ausentes ou restaurar a função e estética dos dentes naturais. As próteses removíveis, como dentaduras, são projetadas para serem retiradas da boca para limpeza e manutenção. Já as próteses fixas, como coroas, pontes e dentes sobre implantes, são cimentadas ou parafusadas permanentemente na boca e não podem ser removidas pelo paciente. 
-                                            <p>Para que Serve?</p>
+                                            <p></p>
+                                            <p style="font-weight: bold;">Para que Serve?</p>
                                              Ajudam a restaurar a capacidade de mastigação, melhorar a fala, manter a estabilidade e alinhamento dos dentes remanescentes, prevenir a movimentação dos dentes vizinhos e melhorar a estética do sorriso. É fundamental cuidar adequadamente das próteses, mantendo uma boa higiene bucal e realizando visitas regulares ao dentista para garantir que elas estejam funcionando corretamente e em bom estado.
                                             </p>
                                     </div>
@@ -536,7 +543,7 @@
         <div class="col-lg-4">
             <div class="text-center services-boxes rounded p-4 mt-4">
                 <div class="services-boxes-icon">
-                    <img src="images/images.png" style="width: 70px;">
+                    <img src="images/dental-veneer.png" style="width: 70px;">
                 </div>
                 <div class="mt-4">
                     <!-- <h5 class="mb-0">Facetas ou Lentes Dentais</h5> -->
@@ -553,9 +560,10 @@
                           <div id="panelsStayOpen-facetas" class="accordion-collapse collapse">
                             <div class="accordion-body">
                                 
-                                <p class="text-muted mt-3"><p>O que é?</p> 
+                                <p class="text-muted mt-3"><p style="font-weight: bold;">O que é?</p> 
                                     Tanto a faceta de porcelana como a lente de contato dental são próteses colocadas sobre o dente natural. Elas se caracterizam por serem muito finas, delicadas e praticamente imperceptíveis.
-                                     <p>Para que serve?</p>
+                                    <p></p>
+                                     <p style="font-weight: bold;">Para que serve?</p>
                                     Dar a estética necessária e desejada de forma confortável para o paciente. Podem ser realizadas com mínimo desgaste dentário ou sem desgaste dentário. As facetas de resina composta normalmente são confeccionadas sem desgaste dos dentes. O Dentista avaliará o caso e determinará qual a melhor opção de tratamento.
                                     </p>
                             </div>
@@ -573,7 +581,7 @@
         <div class="col-lg-4">
             <div class="text-center services-boxes rounded p-4 mt-4">
                 <div class="services-boxes-icon">
-                    <img src="images/images.png" style="width: 70px;">
+                    <img src="images/invi.png" style="width: 70px;">
                 </div>
                 <div class="mt-4">
                     <!-- <h5 class="mb-0">Invisalign</h5> -->
@@ -591,9 +599,10 @@
                             <div class="accordion-body">
                                 
                                 
-                                <p class="text-muted mt-3"><p>O que é?</p> 
+                                <p class="text-muted mt-3"><p style="font-weight: bold;">O que é?</p> 
                                     O Sistema Invisalign é um aparelho ortodôntico transparente em que é utilizado uma abordagem totalmente inovadora e absolutamente eficaz no alinhamento efetivo dos dentes. 
-                                    <p>Para que serve?</p>
+                                    <p></p>
+                                    <p style="font-weight: bold;">Para que serve?</p>
                                     Diferente dos aparelhos convencionais. com o sistema de alinhadores transparentes o ortodontista faz captura de imagens em 3D dos dentes do paciente. Assim, é possível criar alinhadores totalmente personalizados, bastante confortáveis e modernos. Quando posicionados e adaptados aos dentes, os alinhadores começam a movimentá-los corretamente. Uma das vantagens dos alinhadores é a praticidade, por serem constituídos de um material especifico, eles se tornam altamente resistentes e não interferem de maneira alguma no cotidiano do paciente.
                                     </p>
                             </div>
