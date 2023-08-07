@@ -40,35 +40,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-Lzlmxud9eC6CU4y0w4lm0xjZEP6OWQ69dS7C2ZbEDJ7PJ7smw5Vp38m14F75KhSt" crossorigin="anonymous"></script>
 
     <style>
-
-@media (max-width: 576px) {
-    #infoNav span {
-        display: none !important;
-    }
-    #infoNav .mdi-whatsapp {
-        display: block !important;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-
-
-@media (max-width: 576px) {
-    .img-fluid.logo-light {
-        width: 250px !important;
-    }
-    .mdi-whatsapp {
-        font-size: 30px !important;
-    }
-    .infoNav span {
-        font-size: 18px !important;
-    }
-}
-
-
-     /*   @media (max-width: 768px) {
-            #infoNav, #navSuperior {
+        @media (max-width: 349px) {
+            #infoNav {
                 display: none;
             }
         }
@@ -76,10 +49,10 @@
      
       
         @media (min-width: 769px) {
-            .sticky .collapse{
+            /* .sticky .collapse{
                 display: flex !important;
-               
-            }
+                justify-content: center !important; 
+            } */
     
             .stickyadd .collapse {
                 margin-top: 0;
@@ -94,13 +67,33 @@
             .stickyadd .ms-auto{
                 margin-left: auto!important;
             }
+
+            .sticky .collapse{
+                display: flex !important;
+                justify-content: center !important; 
+                margin: 1rem;
+            }
         }
     
         @media (max-width: 1000px) {
-            #infoNav, #navSuperior, .mine-nav, #navInferior {
+            #infoNav , .infoNav, .mine-nav, #navInferior {
                 display: none;
             }
-        }*/
+            #navSuperior{
+                height: 70px;
+            }
+            #navSuperior img{
+                width: 10rem !important;
+                margin: 0 !important;
+            }
+            .sticky .collapse{
+                display: flex !important;
+                justify-content: space-between !important; 
+            }
+        
+        }
+
+        
         .nav-link{
             color: white;
             margin-inline: 15px;
@@ -199,15 +192,12 @@
 
     <nav id="navSuperior" class="navbar navbar-expand-lg bg-body-tertiary sticky" style="flex-direction: column ;align-items: flex-end  !important;">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSuperiorNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            
-<span class="navbar-toggler-icon"></span>
-
-          </button>
-
 
           <div class="collapse navbar-collapse justify-content-around" id="navbarSuperiorNav">
             <img src="images/Logo Urban Dark.png"  alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 350px;">
+            <span class="mx-2" style="font-size: 0.8rem;">
+                Agende sua consulta : <span><small>41.</small>3149-1342</span> ou  <span><small>41.</small>9550-6691</span> 
+                </span>
 
             <div id="infoNav" class="infoNav">
                 <span class="mx-2" style="font-size: 23px; color: rgb(60 84 165);">
@@ -361,7 +351,7 @@
                 <div class="col-lg-4">
                     <div class="text-center services-boxes rounded p-4 mt-4">
                         <div class="services-boxes-icon">
-                            <img src="images/braces.png" style="width: 70px;">
+                            <img src="images/ortodontia.png" style="width: 70px;">
                         </div>
                         <div class="mt-4">
                             
