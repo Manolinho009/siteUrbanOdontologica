@@ -89,6 +89,12 @@
                 justify-content: space-between !important; 
                 margin: 1rem;
             }
+
+            #navbarInferiorNav {
+                display: flex !important;
+                justify-content: center !important; 
+                margin: 1rem;
+            }
         }
     
         @media (max-width: 1000px) {
@@ -1098,6 +1104,14 @@
             setInterval(changeBackground, 4000); // Troca a imagem a cada 4 segundos
       
         
+            
+            // Define a função para alterar o zoom da página
+            function setZoom(zoomLevel) {
+            document.body.style.zoom = zoomLevel;
+            }
+
+            // Chama a função para definir o zoom para 80%
+            setZoom(0.8);
 
     </script>
 </body>
