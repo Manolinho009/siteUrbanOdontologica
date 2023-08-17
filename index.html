@@ -88,13 +88,34 @@
             }
         }
     
+        @media (max-width: 321px) {
+            #telefoneMini{
+                display: none !important;
+                visibility: hidden !important;
+
+            }
+        }
         @media (max-width: 1000px) {
             #infoNav , .infoNav, #navInferior {
                 display: none;
             }
             #navSuperior{
-                height: 70px;
+                height: 45px !important;
             }
+            .numberBox{
+                /* margin-right: 0 !important; */
+                margin: 0 !important;
+            }
+            #telefoneMini{
+                text-align: right;
+                display: flex !important;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-content: center;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            
             #navSuperior img{
                 width: 10rem !important;
                 margin: 0 !important;
@@ -212,10 +233,10 @@
 
           <div class="collapse navbar-collapse justify-content-around" id="navbarSuperiorNav" style=" flex-wrap: wrap;">
             <img src="images/Logo Urban Dark.png"  alt="" class="img-fluid logo-light m-4" style="font-size: 40px; width: 240px;">
-            <span id="telefoneMini" class="mx-2" style="font-size: 6px; margin-top: -20px;">
-                 <span class="numberBox" style="margin-left: 150px;"> 41.3149-1342 ou 41.9550-6691</span> 
-                <a href="https://wa.me//5541995506691?text=" class="mt-3" target="_blank">
-                    <i style="font-size: 25px; color: rgb(51, 211, 65);" class="mdi mdi-whatsapp mt-3"></i>
+            <span id="telefoneMini" class="mx-2" style="font-size: 6px;">
+                 <span class="numberBox" > 41.3149-1342 ou 41.9550-6691</span> 
+                <a href="https://wa.me//5541995506691?text="  target="_blank">
+                    <i style="font-size: 25px; color: rgb(51, 211, 65);" class="mdi mdi-whatsapp"></i>
                 </a>
                 </span>
 
